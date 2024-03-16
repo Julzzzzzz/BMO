@@ -1,6 +1,6 @@
 import '/src/styles/AdminNavbar.css'
 import React from 'react';
-import { NavLink, Navigate, useNavigate } from 'react-router-dom';
+import { NavLink, Navigate, Outlet, useNavigate } from 'react-router-dom';
 
 export default function AdminNavbar() {
   const navigate = useNavigate();
@@ -9,7 +9,8 @@ export default function AdminNavbar() {
     navigate('/')
   }
 
-  return (
+  return (<>    
+  
     <nav className="navbar">
 
       <div className="navbar-container">
@@ -31,6 +32,10 @@ export default function AdminNavbar() {
             </button>
         
     </nav>
+    <Outlet/>
+
+    </>
+
  
   );
 };
