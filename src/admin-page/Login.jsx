@@ -20,7 +20,7 @@ function handleSubmit(e){
 if (username === userName && password === correctPassword) {
     console.log('logged in successfully')
     setLogin(true)
-    navigate('/overview')
+    navigate('/')
 } else {
     console.log('Invalid username or password')
     setLogin(false)

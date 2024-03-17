@@ -6,11 +6,12 @@ export default function AdminNavbar() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    navigate('/')
+    navigate('login')
   }
 
   return (<>    
-  
+  <div className='wrapper'>
+    <div className='navigate'>
     <nav className="navbar">
 
       <div className="navbar-container">
@@ -32,11 +33,16 @@ export default function AdminNavbar() {
             </button>
         
     </nav>
+    </div>
+
+    <div className='content'>
     <Outlet/>
+    </div>
+  </div>
+    
+   
 
-    </>
-
- 
+ </>
   );
 };
 

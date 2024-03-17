@@ -1,4 +1,14 @@
 /* Navbar root styles */
+.navigate{
+  display:flex;
+  flex-direction: row;
+}
+
+/* .container{
+  display:flex;
+  flex-direction:column;
+  height:100vh;
+} */
 .navbar {
     background-color: var(--primary-color); /* Soft Blue background color */
     color: var(--secondary-color); /* White text color */
@@ -14,6 +24,8 @@
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center items horizontally */
   }
+
+
   
   /* Navbar logo styles */
   .navbar-logo {

@@ -1,0 +1,9 @@
+.addUser{
+    display:flex;
+    justify-content:space-around;
+    flex-direction:column;
+    width:75vw;
+    height:100vh;
+    padding-left:21vw;
+    gap:2rem;
+}

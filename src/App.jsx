@@ -65,6 +65,8 @@ import NewUser from './admin-components/NewUser';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
+    <>
+    <Route path='login' element={<Login />} />
     <Route path='/' element={<AdminNavbar />}>
       <Route path='dashboard' index element = {<AdminDashboard />} />
       <Route path='user-list' index element = {<UserList />} />
@@ -73,7 +75,7 @@ const router = createBrowserRouter(
       <Route path='new-user'index element = {<NewUser />} />
       <Route path='add-user'index element = {<AddUser />} />
     </Route>
-
+ </>
 ))
 
 
