@@ -13,6 +13,7 @@ export default function AddUser() {
     firstName:getFormData('firstName'),
     lastName:getFormData('lastName'),
     email:getFormData('email'),
+    username:getFormData('userName'),
     password:getFormData('password'),
     initialDeposit:getFormData('initialDeposit')
   }
@@ -34,26 +35,31 @@ export default function AddUser() {
         <form onSubmit={handleSubmit}>
           <label>
           First Name:
-          <input type='text' name='firstName' placeholder='First Name'></input>
+          <input type='text' name='firstName' placeholder='First Name' autoComplete="off"></input>
           </label>
 
           <label> Last Name:
-          <input type='text' name='lastName' placeholder='Last Name'></input>
+          <input type='text' name='lastName' placeholder='Last Name' autoComplete="off"></input>
           </label>
 
           <label>
           Email:
-          <input type='email' name='email' placeholder='Email'></input>
+          <input type='email' name='email' placeholder='Email' autoComplete="off"></input>
           </label>
 
           <label> 
           Initial Deposit:
-          <input type='number' name='initialDeposit' placeholder='Amount'></input>
+          <input type='number' name='initialDeposit' placeholder='Amount' autoComplete="off"></input>
+          </label>
+
+          <label> 
+          User Name:
+          <input type='text' name='userName' placeholder='User Name' autoComplete="off"></input>
           </label>
 
           <label>
           Password:
-          <input type='password' name='password' placeholder='Password'></input>
+          <input type='password' name='password' placeholder='Password' autoComplete="off"></input>
           </label>
 
         <button  type='submit'>Add</button>

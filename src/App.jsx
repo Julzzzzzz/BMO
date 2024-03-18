@@ -10,6 +10,12 @@ import Reports from './admin-components/Reports';
 import Settings from './admin-components/Settings';
 import AdminOverview from './admin-components/AdminOverview';
 import NewUser from './admin-components/NewUser';
+import UserNavbar from './user-components/UserNavbar';
+import UserDashboard from './user-page/UserDashboard';
+import UserPaybills from './user-components/UserPaybills';
+import UserDeposit from './user-components/UserDeposit';
+import UserTransfer from './user-components/UserTransfer';
+
 
 // function App() {
 
@@ -74,6 +80,12 @@ const router = createBrowserRouter(
       <Route path='settings'index element = {<Settings />} />
       <Route path='new-user'index element = {<NewUser />} />
       <Route path='add-user'index element = {<AddUser />} />
+    </Route>
+    <Route path='/user' element={<UserNavbar />}>
+      <Route path='dashboard' index element={<UserDashboard />} />
+      <Route path='pay-bills' index element={<UserPaybills />} />
+      <Route path='deposit' index element={<UserDeposit />} />
+      <Route path='transfer' index element={<UserTransfer />} />
     </Route>
  </>
 ))

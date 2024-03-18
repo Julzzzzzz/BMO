@@ -10,15 +10,24 @@ const [password, setPassword] = useState('')
 const navigate = useNavigate()
 const [loginAttempted, setLoginAttempted] = useState(false)
 
-const userName = 'admin'
-const correctPassword = 'admin123'
+// const userName = 
+// const correctPassword = 'admin123'
 
 function handleSubmit(e){
     e.preventDefault()
     setLoginAttempted(true)
 
-if (username === userName && password === correctPassword) {
-    console.log('logged in successfully')
+    const users = JSON.parse(localStorage.getItem('users')) || []
+    const user = users.find(user => user.username === username && user.password === password)
+
+
+if (user) {
+    console.log('logged in as user')
+    setLogin(true)
+    navigate('/user')
+} else if 
+    (username === 'admin' && password === 'admin123') {
+    console.log('logged in as admin')
     setLogin(true)
     navigate('/')
 } else {
