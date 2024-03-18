@@ -6,19 +6,26 @@ import '/src/styles/AddUser.css'
 export default function AddUser() {
   const handleSubmit = (e) => {
   e.preventDefault();
-
   const getFormData = (name) => e.target.elements[name].value
 
   
-  const userData = {
+  const newUser = {
     firstName:getFormData('firstName'),
     lastName:getFormData('lastName'),
     email:getFormData('email'),
     password:getFormData('password'),
     initialDeposit:getFormData('initialDeposit')
   }
-    console.log(localStorage.getItem('userData'));
-    localStorage.setItem('userData' , JSON.stringify(userData));
+  const existingUser = JSON.parse(localStorage.getItem('users')) || []
+
+  const updatedUser = [...existingUser, newUser]
+    console.log(updatedUser)
+    localStorage.setItem('users' , JSON.stringify(updatedUser))
+    e.target.reset()
+
+
+  
+ 
   };
 
   return (
