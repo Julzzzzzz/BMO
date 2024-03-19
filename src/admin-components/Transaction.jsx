@@ -1,8 +1,15 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 export default function Transaction() {
 const [transactions, setTransactions] = useState([])
 
+useEffect(() => {
+const storedTransactions = JSON.parse(localStorage.getItem('transactions'))
+
+if(storedTransactions) {
+    setTransactions(storedTransactions)
+}
+}, [])
 const handleTransaction = (e) => {
     e.preventDefault()
 
@@ -14,7 +21,10 @@ const handleTransaction = (e) => {
         amount: amount,
         date: new Date().toLocaleString()
     }
-    setTransactions([...transactions, newTransaction])
+    const updatedTransactions = [...transactions, newTransaction]
+    setTransactions(updatedTransactions)
+    
+    localStorage.setItem('transactions', JSON.stringify(updatedTransactions))
     e.target.reset()
 }
 
@@ -32,13 +42,16 @@ const handleTransaction = (e) => {
     <div>
         <label>Enter Amount</label>
         <input type='number' name='inputAmount' className='inputAmount' />
-        <button type='submit' className='proceed-btn' onSubmit={handleTransaction}>Proceed</button>
+        <button type='submit' className='proceed-btn'>Proceed</button>
     </div>
     </form>
     <div>
         <h2>Recent Transaction</h2>
         <ul>
-            {transactions.map((transaction, index) => 
+            {transactions
+                .sort((a, b) =>new Date(b.date) - new Date(a.date))
+                .slice(0,3)
+                .map((transaction, index) => 
             <li key={index}>
                 <span>Date:{transaction.date}<br/></span>
                 <span>Tpye:{transaction.type}<br/></span>
