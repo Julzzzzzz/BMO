@@ -6,7 +6,7 @@ const [recentTransactions, setRecentTransactions] = useState([])
 
   useEffect(() =>{
   
-    const storedTransactions = JSON.parse(localStorage.getItem('transactions') || [])
+    const storedTransactions = JSON.parse(localStorage.getItem('transactions') || '[]')
     const sortedTransactions = storedTransactions.sort((a, b) => new Date(b.date) - new Date(a.date))
 
     setRecentTransactions(sortedTransactions)
