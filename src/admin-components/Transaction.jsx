@@ -10,13 +10,23 @@ if(storedTransactions) {
     setTransactions(storedTransactions)
 }
 }, [])
+
+const generateRandomId = () => {
+     const randomNumber = Math.random().toString(36).substring(2)
+     const transactionId = 'BMO' + randomNumber
+
+     return transactionId
+}
+
 const handleTransaction = (e) => {
     e.preventDefault()
 
     const transactionType = e.target.elements.bills.value
     const amount = e.target.elements.inputAmount.value
+    const transactionId = generateRandomId()
 
     const newTransaction = {
+        id: transactionId, 
         type: transactionType,
         amount: amount,
         date: new Date().toLocaleString()
@@ -53,6 +63,7 @@ const handleTransaction = (e) => {
                 .slice(0,3)
                 .map((transaction, index) => 
             <li key={index}>
+                <span>Id:{transaction.id}<br/></span>
                 <span>Date:{transaction.date}<br/></span>
                 <span>Tpye:{transaction.type}<br/></span>
                 <span>Amount:{transaction.amount}<br/></span>
