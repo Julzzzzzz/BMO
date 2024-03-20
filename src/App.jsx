@@ -15,6 +15,7 @@ import UserDashboard from './user-page/UserDashboard';
 import UserPaybills from './user-components/UserPaybills';
 import UserDeposit from './user-components/UserDeposit';
 import UserTransfer from './user-components/UserTransfer';
+import Transaction from './admin-components/Transaction';
 
 
 // function App() {
@@ -75,6 +76,7 @@ const router = createBrowserRouter(
     <Route path='login' element={<Login />} />
     <Route path='/' element={<AdminNavbar />}>
       <Route path='dashboard' index element = {<AdminDashboard />} />
+      <Route path='transaction' index element = {<Transaction />} />
       <Route path='user-list' index element = {<UserList />} />
       <Route path='reports'index element = {<Reports />} />
       <Route path='settings'index element = {<Settings />} />

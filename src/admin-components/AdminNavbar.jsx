@@ -19,6 +19,7 @@ export default function AdminNavbar() {
         <div className="navbar-logo">Your Bank Logo</div>
         <div className="navbar-links">
           <NavLink to="/dashboard" >Dashboard</NavLink>
+          <NavLink to="/transaction" >Transaction</NavLink>
           <NavLink to="/add-user" >Add Users</NavLink>
           <NavLink to="/user-list" >User Lists</NavLink>
           <NavLink to="/reports" >Reports</NavLink>

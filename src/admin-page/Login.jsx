@@ -21,15 +21,15 @@ function handleSubmit(e){
     const user = users.find(user => user.username === username && user.password === password)
 
 
-if (user) {
-    console.log('logged in as user')
+if (username === 'admin' && password === 'admin123') {
+        console.log('logged in as admin')
+        setLogin(true)
+        navigate('/')
+
+} else if (user) {
     setLogin(true)
     navigate('/user')
-} else if 
-    (username === 'admin' && password === 'admin123') {
-    console.log('logged in as admin')
-    setLogin(true)
-    navigate('/')
+   
 } else {
     console.log('Invalid username or password')
     setLogin(false)
