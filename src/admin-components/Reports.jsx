@@ -1,7 +1,10 @@
 import React from 'react'
+import '/src/styles/DefaultStyles.css'
 
 export default function Reports() {
   return (
-    <div>display account increase %</div>
+    <div className='componentContainer'>
+      display account increase %
+    </div>
   )
 }

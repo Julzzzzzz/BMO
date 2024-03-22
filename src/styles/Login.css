@@ -1,12 +1,4 @@
-/* CSS variables */
-:root {
-    --primary-color: #3498db; /* Soft Blue */
-    --secondary-color: #ffffff; /* White */
-    --accent-color: #2ecc71; /* Green */
-    --highlight-color: #f39c12; /* Orange */
-  }
-  
-  .loginContainer {
+.loginContainer {
     display: flex;
     justify-content: center;
     align-items: center;

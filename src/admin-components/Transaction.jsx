@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import '/src/styles/DefaultStyles.css'
 
 export default function Transaction() {
 const [transactions, setTransactions] = useState([])
@@ -40,6 +41,7 @@ const handleTransaction = (e) => {
 
     
   return (<>    
+  <div className='componentContainer'>
   <form onSubmit={handleTransaction}>  
     <div>
         <label> Choose Your Transaction </label>
@@ -66,11 +68,12 @@ const handleTransaction = (e) => {
                 <span>Id:{transaction.id}<br/></span>
                 <span>Date:{transaction.date}<br/></span>
                 <span>Tpye:{transaction.type}<br/></span>
-                <span>Amount:{transaction.amount}<br/></span>
+                <span>Amount:{transaction.amount}<br/></span><br/>
             </li>
             )}
         </ul>
     </div>
+</div>
 
     </>)
 }

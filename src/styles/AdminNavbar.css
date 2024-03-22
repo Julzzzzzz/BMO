@@ -1,78 +1,80 @@
-/* Navbar root styles */
+
 .navigate{
   display:flex;
   flex-direction: row;
 }
 
-/* .container{
-  display:flex;
-  flex-direction:column;
-  height:100vh;
-} */
 .navbar {
-    background-color: var(--primary-color); /* Soft Blue background color */
-    color: var(--secondary-color); /* White text color */
-    height: 100%; /* Full height */
-    width: 250px; /* Fixed width */
-    position: fixed; /* Fixed position */
-    top: 0; /* Position from the top */
-    left: 0; /* Position from the left */
-    overflow-y: auto; /* Enable vertical scroll if needed */
-    padding-top: 20px; /* Add some padding at the top */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); /* Add shadow */
-    display: flex; /* Use flexbox */
-    flex-direction: column; /* Stack elements vertically */
-    align-items: center; /* Center items horizontally */
+    background-color: var(--primary-color); 
+    color: var(--secondary-color); 
+    height: 100%; 
+    width: 250px;
+    position: fixed; 
+    top: 2px; 
+    left: 2px ; 
+    overflow-y: auto; 
+    padding-top: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3); 
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    
   }
 
 
-  
-  /* Navbar logo styles */
+
   .navbar-logo {
-    font-size: 24px; /* Logo font size */
-    font-weight: bold; /* Logo font weight */
-    margin-bottom: 20px; /* Add space below the logo */
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 20px;  
   }
   
-  /* Navbar links styles */
   .navbar-links {
-    list-style-type: none; /* Remove list bullet points */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
+    list-style-type: none;  
+    padding: 0;   
+    margin: 0;  
     display:flex;
     flex-direction:column;
     gap:2rem;
+    font-size:2rem;
   }
   
   .navbar-links li {
-    margin-bottom: 10px; /* Add space between each link */
+    margin-bottom: 10px;  
+  }
+
+  a:-webkit-any-link {
+    text-decoration: none;
   }
   
   .navbar-links li a {
-    color: var(--secondary-color); /* White text color */
-    text-decoration: none; /* Remove underline */
-    padding: 10px 20px; /* Add padding */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    color: var(--secondary-color);  
+    text-decoration: none;  
+    padding: 10px 20px;  
+    transition: background-color 0.3s ease;  
   }
   
   .navbar-links li a:hover {
-    background-color: var(--accent-color); /* Green background color on hover */
+    background-color: var(--accent-color);  
   }
   
-  /* Logout button styles */
+ 
   .logoutBTN {
-    background-color: var(--highlight-color); /* Orange background color */
-    color: var(--secondary-color); /* White text color */
-    border: none; /* Remove border */
-    padding: 10px 20px; /* Add padding */
-    display: block; /* Make the button a block element */
-    width: 100%; /* Full width */
-    cursor: pointer; /* Add pointer cursor on hover */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    background-color: var(--highlight-color);  
+    color: var(--secondary-color); 
+    border: none;  
+    padding: 10px 20px;  
+    display: block;  
+    width: 100%; 
+    cursor: pointer;  
+    transition: background-color 0.3s ease; 
+    position:absolute;
+    bottom:20px;
+    font-size: 2rem;
     
   }
   
   .logoutBTN:hover {
-    background-color: #e67e22; /* Darker orange background color on hover */
+    background-color: #e67e22;  
   }
   

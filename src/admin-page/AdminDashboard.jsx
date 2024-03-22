@@ -14,7 +14,7 @@ const [recentTransactions, setRecentTransactions] = useState([])
 
   return (<>
 
-    <div className='adminDashboard'>
+    <div className='componentContainer'>
         <h2>Transaction History</h2>
         <ul>
             {recentTransactions
@@ -24,12 +24,11 @@ const [recentTransactions, setRecentTransactions] = useState([])
                 <span>Id:{transaction.id}<br/></span>
                 <span>Date:{transaction.date}<br/></span>
                 <span>Tpye:{transaction.type}<br/></span>
-                <span>Amount:{transaction.amount}<br/></span>
+                <span>Amount:{transaction.amount}<br/></span><br/>
             </li>
             )}
         </ul>
     </div>
-
   </>
   )
 }

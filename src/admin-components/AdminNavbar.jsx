@@ -1,4 +1,5 @@
 import '/src/styles/AdminNavbar.css'
+import '/src/styles/DefaultStyles.css'
 import React from 'react';
 import { NavLink, Navigate, Outlet, useNavigate } from 'react-router-dom';
 

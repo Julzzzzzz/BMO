@@ -1,6 +1,5 @@
 import React from 'react'
 import { createBrowserRouter, BrowserRouter as Router, Routes, Route, RouterProvider, createRoutesFromElements, Outlet } from 'react-router-dom';
-import './App.css'
 import Login from './admin-page/Login'
 import AdminNavbar from './admin-components/AdminNavbar';
 import AdminDashboard from './admin-page/AdminDashboard';
@@ -8,7 +7,6 @@ import AddUser from './admin-components/AddUser';
 import UserList from './admin-components/UserList';
 import Reports from './admin-components/Reports';
 import Settings from './admin-components/Settings';
-import AdminOverview from './admin-components/AdminOverview';
 import NewUser from './admin-components/NewUser';
 import UserNavbar from './user-components/UserNavbar';
 import UserDashboard from './user-page/UserDashboard';
