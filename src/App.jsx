@@ -16,6 +16,7 @@ import UserPaybills from './user-components/UserPaybills';
 import UserDeposit from './user-components/UserDeposit';
 import UserTransfer from './user-components/UserTransfer';
 import Transaction from './admin-components/Transaction';
+import HomePage from './admin-page/HomePage';
 
 
 // function App() {
@@ -73,21 +74,24 @@ import Transaction from './admin-components/Transaction';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-    <Route path='login' element={<Login />} />
-    <Route path='/' element={<AdminNavbar />}>
-      <Route path='dashboard' index element = {<AdminDashboard />} />
-      <Route path='transaction' index element = {<Transaction />} />
-      <Route path='user-list' index element = {<UserList />} />
-      <Route path='reports'index element = {<Reports />} />
-      <Route path='settings'index element = {<Settings />} />
-      <Route path='new-user'index element = {<NewUser />} />
-      <Route path='add-user'index element = {<AddUser />} />
-    </Route>
+    <Route path='/' element={<HomePage />}>
+      <Route path='login' index element = {<Login />}></Route>
+    
+      <Route path='/admin' element = {<AdminDashboard />}>
+        <Route path='transaction' index element = {<Transaction />} />
+        <Route path='user-list' index element = {<UserList />} />
+        <Route path='reports'index element = {<Reports />} />
+        <Route path='settings'index element = {<Settings />} />
+        <Route path='new-user'index element = {<NewUser />} />
+        <Route path='add-user'index element = {<AddUser />} />
+      </Route>
+   
     <Route path='/user' element={<UserNavbar />}>
       <Route path='dashboard' index element={<UserDashboard />} />
       <Route path='pay-bills' index element={<UserPaybills />} />
       <Route path='deposit' index element={<UserDeposit />} />
       <Route path='transfer' index element={<UserTransfer />} />
+    </Route>
     </Route>
  </>
 ))
